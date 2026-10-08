@@ -1,0 +1,10 @@
+{
+ "slug": "ayar-cards",
+ "title": "ငါးမွေးမြူရေးအဆင့်၃ဆင့်",
+ "label": "ငါးမွေးမြူရေးအဆင့် ၃ ဆင့်",
+ "desc": "ငါးမွေးမြူရေးအဆင့်၃ဆင့်",
+ "cat": "c2",
+ "order": 0,
+ "body": "<div class=\"cards\"><div class=\"card\"><img src=\"assets/img/ngar-hmone.jpg\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>Nursery Born(ငါးမှုန်)</h3><p>အရွယ်အစား :ဥမှပေါက်စအရွယ်ငါး<br>ငါးကန်အရွယ်အစား:တစ်မီတာ</p></div></div><div class=\"card\"><img src=\"assets/img/ngar-thann.jpg\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>Pre Grow Out(ငါးသန်)</h3><p>အရွယ်အစား:၃၀ဂရမ်မှ၁၀၀ဂရမ်<br>ငါးကန်အရွယ်အစား:တစ်မီတာခွဲ</p></div></div><div class=\"card\"><img src=\"assets/img/ngar-phyan.jpg\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>Grow Out(ငါးဖြန်း)</h3><p>ငါးကန်အရွယ်အစား:သုံးမီတာ<br>အရွယ်အစား:၁၀၀ဂရမ်နှင့်အထက်</p></div></div></div>\n<h2>ပါဝင်သည့်အကြောင်းအရာများ</h2>\n<div class=\"cards\"><div class=\"card\"><img src=\"assets/img/t1.jpg\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>မြေဩဇာထည့်သွင်းခြင်း</h3><a class=\"go\" href=\"fertilizer.php\">ပိုမိုသိရှိရန်</a></div></div><div class=\"card\"><img src=\"assets/img/fishexport1.jpg\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>ဈေးကွက်တင်ပို့မှု</h3><a class=\"go\" href=\"market.php\">ပိုမိုသိရှိရန်</a></div></div><div class=\"card\"><img src=\"assets/img/fish3.jpg\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>ငါးကန်သန့်ရှင်းရေး</h3><a class=\"go\" href=\"pond-cleaning.php\">ပိုမိုသိရှိရန်</a></div></div><div class=\"card\"><img src=\"assets/img/dis.jpg\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>ငါးများ၏ကျန်းမာရေးနှင့်ငါးဆေးထိုးသားဖောက်နည်း</h3><a class=\"go\" href=\"fish-health-breeding.php\">ပိုမိုသိရှိရန်</a></div></div><div class=\"card\"><img src=\"assets/img/fishland.jpg\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>ငါးကန်မြေနေရာရွေးချယ်ခြင်း</h3><a class=\"go\" href=\"pond-site-selection.php\">ပိုမိုသိရှိရန်</a></div></div><div class=\"card\"><img src=\"assets/img/fish6.png\" alt=\"\" loading=\"lazy\"><div class=\"cb\"><h3>ငါးစာကျွေးခြင်း</h3><a class=\"go\" href=\"feeding.php\">ပိုမိုသိရှိရန်</a></div></div></div>",
+ "updated": 1791279701
+}

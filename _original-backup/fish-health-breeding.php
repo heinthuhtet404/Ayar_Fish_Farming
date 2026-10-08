@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="assets/responsive.css">
+	<title></title>
+	<style type="text/css">
+		
+.review{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.review h1{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.review .review_box{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+    background-color: #DDA0DD;
+    color: #483D8B;
+}
+
+.review .review_box .review_card{
+    width: 350px;
+    height: 650px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+
+.review .review_box .review_card .review_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_profile{
+    transform: translateY(-60px);
+}
+
+.review .review_box .review_card .review_profile img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #cccccc;
+}
+
+.review .review_box .review_card .review_text{
+    text-align: center;
+}
+
+.review .review_box .review_card .review_text .name{
+    color: #000;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .name{
+    transform: translateY(-50px);
+}
+
+.review .review_box .review_card .review_text p{
+    text-align: center;
+    line-height: 29px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.review .review_box .review_card:hover .review_text p{
+    margin-top: 5px;
+}
+.review .review_box .review_card .review_text button{
+    padding-top: 10px;
+}
+
+	</style>
+</head>
+<body bgcolor="lightblue" class="site-page">
+<div class="review">
+        <h1>ငါးများ၏ကျန်းမာရေးနှင့်ငါးဆေးထိုးသားဖောက်နည်း</h1>
+
+        <div class="review_box">
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="nutri.jpg">
+                </div>
+
+                <div class="review_text">
+                    <h3 class="name">လိုအပ်သောအာဟာရဓာတ်</h3>
+                    <p>
+                       အာဟာဓာတ်သည်ငါးများ၏ကျန်းမာရေး၊ကြီးထွားမှု၊မျိုးပွားမှုနှင့်ငါးထုတ်ကုန်အရည်အသွေးကောင်းမှုအတွက်အရေးကြီးပါသည်။ငါးများသည်အရွယ်ရောက်ပြီးနောက်မျိုးပွားအဂ်ါနှင့်ဥကြီးထွားမှုအတွက်အစာမှစွမ်းအင်ကိုအသုံးပြုသည်။မျိုးငါးအမများမှာဥနှစ်ဖြစ်ပေါ်ဖို့ရန်အတွက်အာဟာရဓာတ်ပိုလိုအပ်ပါသည်။
+                    </p>
+                    <a href="required-nutrients.php"><button>ပိုမိုလေ့လာကြည့်ရှုရန်</button></a>
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="disease.jpg">
+                </div>
+
+                <div class="review_text">
+                    <h3 class="name">ကျရောက်တတ်သောရောဂါများ</h3>
+
+                    <p>
+                       ကန်အခြေအနေပေါ်တွင် ဂရုစိုက်မှု၊ ရေအရည်အသွေး ထိန်းသိမ်းမှု၊ မွေးမြူသည့်နေရာ သန့်ရှင်းသပ်ရပ်မှုနှင့် အာဟာရပြည့်ဝသော အစာကျွေးမွေးခြင်းစသည့် မွေးမြူသူတစ်ဦးချင်း၏ မွေးမြူရေးဗဟုသုတနှင့် ဂရုစိုက်မှု ရှိ/မရှိစသော အချက်များအပေါ်မူတည်ပြီး ရောဂါဖြစ်ပွားခြင်း ဖြစ်သည်။
+                    </p>
+                    <a href="diseases.php"><button>ပိုမိုလေ့လာကြည့်ရှုရန်</button></a>
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="protect.jpg">
+                </div>
+
+                <div class="review_text">
+                    <h3 class="name">ကာကွယ်နိုင်သောနည်းလမ်းများ</h3>
+
+                    <p>
+                      ငါးရောဂါဖြစ်ပွားနိုင်သော ကာလမတိုင်မီ တစ်လကြိုတင်၍ ငါးကန်ပတ်ဝန်းကျင်ရှိ မြက်ပင်၊ ခြုံပင်များအား ရှင်းလင်းထားခြင်း၊ ငါးကန် အတွင်းရေစပ်တွင် ထုံးများဖြူးထားခြင်း၊ ကန်ရေ၏ ရေအရည်အသွေး ကောင်းမွန်အောင်ပြုလုပ်ထားခြင်းနှင့် ကန်ရေ၏အောက်ဆီဂျင်ပျော်ဝင်နှုန်းကောင်းမွန်အောင် ပြုလုပ်ပေးထားရပါမည်။
+                    </p>
+                    <a href="prevention.php"><button>ပိုမိုလေ့လာကြည့်ရှုရန်</button></a>
+                </div>
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="medicine.jpg">
+                </div>
+
+                <div class="review_text">
+                    <h3 class="name">ငါးဆေးထိုးသားဖောက်နည်း</h3>
+                    <p>
+                    	ငါးများကိုမျိုးပွားလိုပါကမျိုးငါးမျိုးကိုကန်အတွင်းပြုစုမွေးမြူပြီးမျိုးပွားရာသီ၌ဆေးထိုးသားဖောက်နည်းဖြင့်ဖောက်ယူကာသားပေါက်များထုတ်လုပ်ရသည်။အသက်၂နှစ်မှ ၃နှစ်အတွင်းမျိုးပွားရန်အတွက်အရွယ်ရောက်ကြသည်။အထီးများကအမများထက်အရွယ်ရောက်စောသည်။အနွေးပိုင်းဒေသများ၌အရွယ်ရောက်ပိုစောကြသည်။
+                    </p>
+                    <a href="induced-breeding.php"><button>ပိုမိုလေ့လာကြည့်ရှုရန်</button></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+<script src="assets/app.js"></script>
+<footer class="site-footer"><strong>Ayar Fish Farming</strong><br><small>Fish farming knowledge & educational website</small></footer>
+</body>
+</html>

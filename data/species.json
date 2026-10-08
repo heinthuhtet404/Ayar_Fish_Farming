@@ -1,0 +1,98 @@
+[
+    {
+        "id": "s1",
+        "name": "ငါးမြစ်ချင်း",
+        "en": "Rohu",
+        "sci": "Lebeo rohita",
+        "img": "assets\/img\/img-46f66642.png",
+        "page": "rohu.php"
+    },
+    {
+        "id": "s2",
+        "name": "ငါးသိုင်းခေါင်းပွ",
+        "en": "Catla",
+        "sci": "Catla catla",
+        "img": "assets\/img\/img-d70a2bfd.webp",
+        "page": "catla.php"
+    },
+    {
+        "id": "s3",
+        "name": "ငါးရံ့",
+        "en": "Snakehead \/ Snake head murrel",
+        "sci": "Channa striata",
+        "img": "assets\/uploads\/261008-bf348114.png",
+        "page": "prevention.php"
+    },
+    {
+        "id": "s4",
+        "name": "တီလားပီးယား",
+        "en": "Tilapia",
+        "sci": "Oreochromis spp",
+        "img": "assets\/img\/img-5b3c81c2.webp",
+        "page": "tilapia.php"
+    },
+    {
+        "id": "s5",
+        "name": "ငွေရောင်ငါးကြင်း",
+        "en": "Silver carp",
+        "sci": "Hypophthalmichthys molitrix",
+        "img": "assets\/img\/img-d2754abd.jpg",
+        "page": "silver-carp.php"
+    },
+    {
+        "id": "s6",
+        "name": "ငါးတန်",
+        "en": "Striped catfish",
+        "sci": "Pangasius sutchi",
+        "img": "assets\/img\/img-ecb4128a.png",
+        "page": "catfish.php"
+    },
+    {
+        "id": "s7",
+        "name": "မြက်စားငါးကြင်း",
+        "en": "Grass carp",
+        "sci": "Ctenopharyngodon idellus",
+        "img": "assets\/img\/img-8f7ea275.png",
+        "page": null
+    },
+    {
+        "id": "s8",
+        "name": "ငါးကြင်း",
+        "en": "Mriga",
+        "sci": "Ctenopharyngodon idellus",
+        "img": "assets\/img\/img-79268155.webp",
+        "page": null
+    },
+    {
+        "id": "s9",
+        "name": "ခေါင်းကြီးငါးကြင်း",
+        "en": "Bighead carp",
+        "sci": "Aristichthys nobil",
+        "img": null,
+        "page": null
+    },
+    {
+        "id": "s10",
+        "name": "ငါးဖမ်းမ",
+        "en": "Rhotees",
+        "sci": "Osteobrama alfredianus",
+        "img": "assets\/img\/kyin.jpg",
+        "page": null
+    },
+    {
+        "id": "s11",
+        "name": "ရေချိုငါးမုတ်",
+        "en": "Pacu\/Fresh Water Pomfret",
+        "sci": "Piaractus brachypomus",
+        "img": "assets\/img\/pacu.png",
+        "page": null
+    },
+    {
+        "id": "s12",
+        "name": "ကကတစ်",
+        "en": "Asian Sea Bass",
+        "sci": "Lates calarifer",
+        "img": "assets\/img\/kakatik.jpg",
+        "page": null
+    }
+]

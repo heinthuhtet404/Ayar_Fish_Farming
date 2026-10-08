@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="assets/responsive.css">
+	<title>Sign in</title>
+	<style type="text/css">
+		body{
+			border: 3px solid black;
+			width: 300px;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			position: relative;
+			left: 500px;
+			padding-bottom: 20px;
+		}
+		body h3{
+			background-color: pink;
+			height: 60px;
+		    padding-top: 10px;
+		
+			text-align: center;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			
+		}
+		.top{
+			
+			margin-top: -18px;
+
+		}
+		.s{
+			background-color: pink;
+		}
+		.r{
+			background-color: pink;
+		}
+	</style>
+</head>
+<bodyclass="site-page">
+	
+     <div class="top">
+     <h3>Sign in</h3>
+
+		
+
+	<table>
+			
+
+<form >
+
+
+		<tr>
+	<td><label>Name</label></td>
+	<td><input type="text" name="text"><br><br></td>
+</tr>
+<tr>
+	<td><label>Phone</label></td>
+	<td><input type="phone" name="phone"><br><br></td>
+</tr>
+<tr>
+	<td><label>Email</label></td>
+	<td><input type="Email" name="Email"><br><br></td>
+</tr>
+<tr>
+	<td><label>Address</label></td>
+	<td><input type="text" name="address"><br><br></td>
+</tr>
+<tr>
+	<td><label>Date of Birth</label></td>
+	<td><input type="date" name="date"></td>
+</tr>
+<tr>
+	<td><label>Passward</label></td>
+	<td><input type="passward" name="passward"></td>
+</tr>
+<tr>
+	<td><label>Comment</label></td>
+	<td><textarea cols="15" rows="2">ttgfhbj</textarea></td>
+</tr>
+<tr>
+	<td><label>Gender</label></td>
+	<td><input type="radio" name="radio">female<br>
+		<input type="radio" name="">male</td>
+</tr>
+<tr>
+	<td><input type="submit" name="submit" class="s"></td>
+	<td><input type="Reset" name="Reset" class="r"></td>
+</tr>
+
+</form>
+</table>
+</div>
+</div>
+max<input type="range" name="range">min
+<script src="assets/app.js"></script>
+<footer class="site-footer"><strong>Ayar Fish Farming</strong><br><small>Fish farming knowledge & educational website</small></footer>
+</body>
+</html>

@@ -21,14 +21,28 @@ document.addEventListener('DOMContentLoaded', () => {
     let fs = +localStorage.getItem('fs') || 18; const set = v => { fs = Math.min(24, Math.max(16, v)); document.documentElement.style.setProperty('--fs', fs + 'px'); try { localStorage.setItem('fs', fs) } catch (e) { } }; set(fs);
     $$('[data-fs]').forEach(b => b.onclick = () => set(fs + (+b.dataset.fs)));
 });
+// document.addEventListener('DOMContentLoaded', () => {
+//     const q = document.getElementById('q'); if (!q) return; const f = q.closest('form'); if (f) f.onsubmit = e => { e.preventDefault(); document.getElementById('library')?.scrollIntoView() };
+//     q.oninput = () => { const v = q.value.trim().toLowerCase(); document.querySelectorAll('.cat').forEach(c => { let n = 0; c.querySelectorAll('li').forEach(li => { const ok = !v || li.textContent.toLowerCase().includes(v); li.style.display = ok ? '' : 'none'; if (ok) n++ }); c.style.display = n || !v ? '' : 'none' }) }
+// });
 document.addEventListener('DOMContentLoaded', () => {
-    const q = document.getElementById('q'); if (!q) return; const f = q.closest('form'); if (f) f.onsubmit = e => { e.preventDefault(); document.getElementById('library')?.scrollIntoView() };
-    q.oninput = () => { const v = q.value.trim().toLowerCase(); document.querySelectorAll('.cat').forEach(c => { let n = 0; c.querySelectorAll('li').forEach(li => { const ok = !v || li.textContent.toLowerCase().includes(v); li.style.display = ok ? '' : 'none'; if (ok) n++ }); c.style.display = n || !v ? '' : 'none' }) }
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const nav3 = document.getElementById('nav'); if (nav3) nav3.addEventListener('click', e => { if (e.target.closest('a')) nav3.classList.remove('open') });
+    const nav3 = document.getElementById('nav');
+    if (nav3) nav3.addEventListener('click', e => {
+        if (e.target.closest('a')) nav3.classList.remove('open')
+    });
+
     if ('IntersectionObserver' in window) {
-        const io2 = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io2.unobserve(en.target) } }), { threshold: .06, rootMargin: '0px 0px -6% 0px' });
-        document.querySelectorAll('.cat,.path a,.sp a,.card,.gal figure,.rel a,.person,.stats div,.facts div').forEach(el => { el.classList.add('rv'); io2.observe(el) });
+        const io2 = new IntersectionObserver(es => es.forEach(en => {
+            if (en.isIntersecting) {
+                en.target.classList.add('in');
+                io2.unobserve(en.target)
+            }
+        }), { threshold: .06, rootMargin: '0px 0px -6% 0px' });
+
+        document.querySelectorAll('.cat,.path a,.sp a,.card,.gal figure,.rel a,.person,.stats div,.facts div')
+            .forEach(el => {
+                el.classList.add('rv');
+                io2.observe(el)
+            });
     }
 });

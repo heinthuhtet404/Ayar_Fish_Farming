@@ -66,45 +66,118 @@ $steps_href = ['pond-site-selection.php', 'pond-construction.php', 'fertilizer.p
 </section>
 
 <script>
-document.getElementById('pageSearchForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var query = document.getElementById('q').value.trim().toLowerCase();
-    if (!query) return;
-
-    // ယခင် highlight လုပ်ထားသည်များကို ဖြုတ်ရန်
-    document.querySelectorAll('.search-highlight').forEach(function (el) {
-        el.style.outline = '';
-        el.style.transition = '';
-    });
-
-    // ရှာဖွေရမည့် Element များ (လင့်ခ်များ၊ အမျိုးအစားများ၊ ငါးမျိုးစိတ်များနှင့် အဓိကစာသားများ)
-    var targets = document.querySelectorAll('.path li, .cats .cat, .sp a, section h2, section p');
-    var matchedElement = null;
-
-    for (var i = 0; i < targets.length; i++) {
-        var el = targets[i];
-        if (el.textContent.toLowerCase().includes(query)) {
-            matchedElement = el;
-            break;
+(function() {
+    const form = document.getElementById('pageSearchForm');
+    if (!form) return;
+    
+    const input = document.getElementById('q');
+    if (!input) return;
+    
+    // Search result counter
+    let currentMatch = 0;
+    let matchedElements = [];
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = input.value.trim().toLowerCase();
+        
+        if (!query) {
+            showMessage('ရှာဖွေလိုသော စာသားကို ရိုက်ထည့်ပါ။', 'info');
+            return;
         }
+        
+        // Clear previous highlights
+        clearHighlights();
+        matchedElements = [];
+        currentMatch = 0;
+        
+        // Search targets
+        const targets = document.querySelectorAll(
+            '.path li, .cats .cat, .sp a, section h2, section p, section h3'
+        );
+        
+        // Find all matches
+        targets.forEach(function(el) {
+            if (el.textContent.toLowerCase().includes(query)) {
+                matchedElements.push(el);
+            }
+        });
+        
+        // No results
+        if (matchedElements.length === 0) {
+            showMessage('"' + input.value.trim() + '" နှင့် ကိုက်ညီသည့် အကြောင်းအရာ မတွေ့ပါ။', 'error');
+            return;
+        }
+        
+        // Show count
+        showMessage('ရလဒ် ' + matchedElements.length + ' ခု တွေ့ပါသည်။', 'success');
+        
+        // Highlight all matches
+        matchedElements.forEach(function(el) {
+            el.style.transition = 'outline 0.3s ease, background-color 0.3s ease';
+            el.style.outline = '3px solid #f39c12';
+            el.style.outlineOffset = '4px';
+            el.style.backgroundColor = 'rgba(243, 156, 18, .08)';
+            el.style.borderRadius = '8px';
+            el.classList.add('search-highlight');
+        });
+        
+        // Scroll to first match
+        matchedElements[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Auto-clear highlight after 5s
+        setTimeout(function() {
+            clearHighlights();
+        }, 5000);
+    });
+    
+    function clearHighlights() {
+        document.querySelectorAll('.search-highlight').forEach(function(el) {
+            el.style.outline = '';
+            el.style.outlineOffset = '';
+            el.style.backgroundColor = '';
+            el.style.borderRadius = '';
+            el.classList.remove('search-highlight');
+        });
     }
-
-    if (matchedElement) {
-        // ကိုက်ညီသည့်နေရာသို့ ချောမွေ့စွာ Scroll သွားမည်
-        matchedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-        // ကိုက်ညီသည့် Element ကို ခဏတာ အဝါရောင် Highlight ပြပေးမည်
-        matchedElement.classList.add('search-highlight');
-        matchedElement.style.transition = 'outline 0.3s ease';
-        matchedElement.style.outline = '3px solid #f39c12';
-
-        setTimeout(function () {
-            matchedElement.style.outline = '';
+    
+    function showMessage(text, type) {
+        let msg = document.getElementById('search-message');
+        if (!msg) {
+            msg = document.createElement('div');
+            msg.id = 'search-message';
+            msg.style.cssText = 
+                'position:fixed;top:90px;left:50%;transform:translateX(-50%);' +
+                'padding:14px 24px;border-radius:12px;font-size:15px;font-weight:600;' +
+                'z-index:9999;box-shadow:0 20px 40px rgba(10,31,46,.18);' +
+                'transition:opacity .3s ease, transform .3s ease;' +
+                'max-width:90vw;text-align:center;font-family:inherit;';
+            document.body.appendChild(msg);
+        }
+        
+        // Colors by type
+        const styles = {
+            success: 'background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;',
+            error: 'background:#fef2f2;color:#991b1b;border:1px solid #fecaca;',
+            info: 'background:#f0f9ff;color:#075985;border:1px solid #bae6fd;'
+        };
+        
+        msg.style.cssText += styles[type] || styles.info;
+        msg.textContent = text;
+        msg.style.opacity = '1';
+        msg.style.transform = 'translateX(-50%) translateY(0)';
+        
+        // Auto hide
+        clearTimeout(window._searchMsgTimer);
+        window._searchMsgTimer = setTimeout(function() {
+            msg.style.opacity = '0';
+            msg.style.transform = 'translateX(-50%) translateY(-10px)';
+            setTimeout(function() {
+                if (msg.parentNode) msg.parentNode.removeChild(msg);
+            }, 300);
         }, 3000);
-    } else {
-        alert('ရှာဖွေသော စာသားနှင့် ကိုက်ညီသည့် အကြောင်းအရာ လက်ရှိ စာမျက်နှာတွင် မရှိပါ။');
     }
-});
+})();
 </script>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>
